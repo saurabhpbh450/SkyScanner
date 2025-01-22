@@ -46,10 +46,11 @@ To run this project locally, follow these steps:
 
 
 4. In App.jsx
+
    API_KEY = your_openweathermap_api_key
 
 
-5. Start the development server:
+6. Start the development server:
 
    npm run dev
 
