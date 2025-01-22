@@ -38,25 +38,25 @@ To run this project locally, follow these steps:
 
 2. Navigate to the project folder:
 
-cd skyscanner
+   cd skyscanner
 
 3. Install dependencies:
 
-npm install
+   npm install
 
 
 4. In App.jsx
-API_KEY = your_openweathermap_api_key
+   API_KEY = your_openweathermap_api_key
 
 
-Start the development server:
+5. Start the development server:
 
-npm run dev
+   npm run dev
 
 
 
 ## Acknowledgements
 - **OpenWeatherMap** for providing the weather and air quality data API.
--** Material UI** for the UI components.
+- **Material UI** for the UI components.
 - **React** for building the user interface.
 - **Node.js** and Express.js for the backend.
