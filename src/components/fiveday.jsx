@@ -11,6 +11,20 @@ const FiveDayForecast = ({ forecastData }) => {
     }).format(date);
   };
 
+  // Extract one weather record per day
+  const getUniqueDays = (list) => {
+    const uniqueDays = {};
+    list.forEach((item) => {
+      const date = item.dt_txt.split(" ")[0]; // Extract the date part (YYYY-MM-DD)
+      if (!uniqueDays[date]) {
+        uniqueDays[date] = item; // Store only one record per day
+      }
+    });
+    return Object.values(uniqueDays);
+  };
+
+  const uniqueForecastData = getUniqueDays(forecastData.list);
+
   return (
     <div
       style={{
@@ -22,10 +36,10 @@ const FiveDayForecast = ({ forecastData }) => {
         paddingRight: "15px",
         paddingTop: "15px",
         paddingBottom: "5px",
-        boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', // Added shadow for depth
+        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Added shadow for depth
       }}
     >
-      {forecastData.list.slice(0, 5).map((item, index) => (
+      {uniqueForecastData.slice(0, 5).map((item, index) => (
         <div
           key={index}
           style={{
@@ -46,9 +60,7 @@ const FiveDayForecast = ({ forecastData }) => {
             </div>
           </div>
           <div>
-            <div style={{ fontSize: "15px" }}>
-              {item.weather[0].description}
-            </div>
+            <div style={{ fontSize: "15px" }}>{item.weather[0].description}</div>
           </div>
         </div>
       ))}
