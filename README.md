@@ -23,7 +23,8 @@ SkyScanner is a weather application designed to provide users with accurate and 
 Check it out here:  https://skyscannerproject.netlify.app/
 
 ## Screenshots 📸
-![image](https://github.com/user-attachments/assets/41d187dc-d036-46e7-a144-1c713335d100)
+![Screenshot 2025-02-27 at 22-51-54 SkyScanner](https://github.com/user-attachments/assets/623159cd-1f6e-4903-8d73-c0d2e85dda5a)
+
 
 
 
